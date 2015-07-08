@@ -48,7 +48,7 @@ public class DataTester {
 		return ((int)(m));
 	}
 
-	private static void dispData() {
+	private static void dispData() throws IOException{
 		for(Float fl:data){
 			System.out.println(Math.round(fl));
 		}
@@ -64,6 +64,11 @@ public class DataTester {
 			e.printStackTrace();
 		}
 		crunchData();
-		dispData();
+		try {
+			dispData();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
